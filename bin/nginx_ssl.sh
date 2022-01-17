@@ -10,7 +10,7 @@ which docker || (
 
 cd $WONQA_DIR/nginx
 
-REMOTE="$imageRepositoryPath:$subDomain"
+REMOTE="$imageRepositoryPath-$subDomain"
 
 docker build -t $REMOTE .
 echo "✅   Built nginx Docker image"
