@@ -14,8 +14,8 @@ const createNginxContainerDefinition = ({
   awsLogsRegion,
   awsLogsStreamPrefix,
 }) => {
-  const image = (imageRepositoryPath && `${imageRepositoryPath}:${subDomain}`)
-    || `${awsAccountID}.dkr.ecr.${awsRegion}.amazonaws.com/${NGINX_REPOSITORY_NAME}:${subDomain}`;
+  const image = (imageRepositoryPath && `${imageRepositoryPath}_${subDomain}`)
+    || `${awsAccountID}.dkr.ecr.${awsRegion}.amazonaws.com/${NGINX_REPOSITORY_NAME}_${subDomain}`;
   return {
     name: 'nginx',
     image,
