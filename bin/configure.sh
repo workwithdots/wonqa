@@ -37,5 +37,4 @@ echo "Configuring AWS"
 aws --version
 aws configure set default.region $awsRegion
 aws configure set default.output json
-$(aws ecr get-login-password --region "${awsRegion}")
 echo "AWS configured!"
